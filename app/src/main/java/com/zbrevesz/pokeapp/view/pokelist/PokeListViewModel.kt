@@ -19,13 +19,13 @@ class PokeListViewModel {
                 .build().create(RemoteServiceInterface::class.java)
         }
 
-        private val LIMIT: Int = 20
-        private val OFFSET: Int = 20
+        private const val LIMIT: Int = 20
+        private const val OFFSET: Int = 20
     }
 
     init {
         GlobalScope.launch(Dispatchers.IO) {
-            pokelist = PokeDetailViewModel.webservice.getPokemonList(LIMIT, OFFSET)
+            pokelist = webservice.getPokemonList(LIMIT, OFFSET)
         }
     }
 
