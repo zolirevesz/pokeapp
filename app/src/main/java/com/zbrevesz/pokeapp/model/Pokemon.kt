@@ -3,7 +3,7 @@ package com.zbrevesz.pokeapp.model
 data class Pokemon (
     var sprites: List<Sprites>,
     var weight: Int,
-    var heigth: Int,
+    var height: Int,
     var abilities: List <Abilities>
 )
 
